@@ -124,12 +124,10 @@ export function useSWRPages<OffsetType = any, Data = any, Error = any>(
 
   const resetPages = useCallback(() => {
     setPageSWRs([])
-
     setPageCount(() => {
       cacheSet(pageCountKey, 1)
       return 1
     })
-
     setPageOffsets(() => {
       cacheSet(pageOffsetKey, [])
       return []
