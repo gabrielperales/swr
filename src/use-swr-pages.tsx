@@ -141,7 +141,7 @@ export function useSWRPages<OffsetType = any, Data = any, Error = any>(
   }, deps)
 
   // Doesn't have a next page
-  const isReachingEnd = pageOffsets[pageCount] === null
+  const isReachingEnd = pageOffsets[pageCount] == null
   const isLoadingMore = pageCount === pageOffsets.length
   const isEmpty = isReachingEnd && pageCount === 1 && emptyPageRef.current
   const loadMore = useCallback(() => {
